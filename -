@@ -47,7 +47,7 @@ function percentencode(id)
 end
 
 function toplayable(id)
-local playableid = fakeId.."\nhttp://www.roblox.com/asset/?id=3024321684\nhttp://www.roblox.com/asset/?id=3024321684\nhttp://www.roblox.com/asset/?id=3024321684\nhttp://www.roblox.com/asset/?id=3024321684\nhttp://www.roblox.com/asset/?id=3024321684\nhttp://www.roblox.com/asset/?id=3024321684\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n%63%72%65%64%69%74%73%20%74%6f%20%61%69%64%65%7a%72%62%78%61%73%73%65%74%69%64%3a%2f%2f%63%72%65%64%69%74%73%20%74%6f%20%61%69%64%65%7a%63%72%65%64%69%74%73%20%74%6f%20%61%69%64%65%7a&%76%65%72%73%69%6f%6e%69%64="..tostring(id)
+local playableid = fakeId.."\nhttp://www.roblox.com/asset/?id=3024321684\nhttp://www.roblox.com/asset/?id=3024321684\nhttp://www.roblox.com/asset/?id=3024321684\nhttp://www.roblox.com/asset/?id=3024321684\nhttp://www.roblox.com/asset/?id=3024321684\nhttp://www.roblox.com/asset/?id=3024321684\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000008743589375893457349857345873495843753534535%63%72%65%64%69%74%73%20%74%6f%20%61%69%64%65%7a%72%62%78%61%73%73%65%74%69%64%3a%2f%2f%63%72%65%64%69%74%73%20%74%6f%20%61%69%64%65%7a%63%72%65%64%69%74%73%20%74%6f%20%61%69%64%65%7a&%76%65%72%73%69%6f%6e%69%64="..tostring(id)
 return playableid
 end
 
