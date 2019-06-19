@@ -40,7 +40,6 @@ s::::::::::::::s a:::::aaaa::::::a k::::::k  k:::::ka:::::aaaa::::::a r:::::r   
 
 
 
-
 ]]
 function encode(Code)
 ID = tostring(Code)
@@ -74,7 +73,7 @@ function percentencode(id)
 end
 
 function toplayable(id)
-local playableid = fakeId.. "\n\n\n\n\n" .. message .. "\n\n\n\n\%6d%61%64%65%20%62%79%20%61%70%65%74%30%72%20%63%72%65%64%69%74%73%20%74%6f%20%61%69%64%65%7a%20%3a%29&%76%65%72%73%69%6f%6e%69%64="..tostring(id)
+local playableid = fakeId.."\n--[[\n\n\nsakarja audio protector\ncredits to aidez\n\n\n\n"..message.."\n\n\n\n\n]]\n&%76%65%72%73%69%6f%6e%69%64="..tostring(id)
 return playableid
 end
 
@@ -90,26 +89,71 @@ siid = string.gsub(yesid, "http://www.roblox.com/asset/", "")
 yupid = string.gsub(siid, "?id=", "")
 encrypted = fullyconvert(yupid)
 
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+	if v.Name == "BoomBox" then
+		v.Remote:FireServer("PlaySong", tostring(encrypted))
+		end
+	end
+end
+
+local ScreenGui = Instance.new("ScreenGui")
+local id = Instance.new("TextBox")
+local play = Instance.new("TextButton")
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+id.Name = "id"
+id.Parent = ScreenGui
+id.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+id.BorderSizePixel = 0
+id.Position = UDim2.new(0.865449667, 0, 0.959645629, 0)
+id.Size = UDim2.new(0.100067794, 0, 0.0399999991, 0)
+id.Font = Enum.Font.SourceSans
+id.PlaceholderText = "id here"
+id.Text = ""
+id.TextColor3 = Color3.new(1, 1, 1)
+id.TextScaled = true
+id.TextSize = 14
+id.TextWrapped = true
+
+play.Name = "play"
+play.Parent = ScreenGui
+play.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
+play.BorderSizePixel = 0
+play.Position = UDim2.new(0.965331793, 0, 0.959563911, 0)
+play.Size = UDim2.new(0.0346682258, 0, 0.0400816947, 0)
+play.Font = Enum.Font.SourceSans
+play.Text = "Play"
+play.TextColor3 = Color3.new(1, 1, 1)
+play.TextScaled = true
+play.TextSize = 14
+play.TextWrapped = true
+
+play.MouseButton1Click:connect(function()
+
 for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
 if v.Name == "BoomBox" then
 	v.Parent = game.Players.LocalPlayer.Character
-	v.Remote:FireServer("PlaySong", tostring(encrypted))
+	v.Remote:FireServer("PlaySong", "3069324678")
+	wait(1.8)
 	end
 end
-end
+encode(id.Text)
+end)
 
 game.Players.LocalPlayer.Chatted:Connect(function(msg, plr)
     local lower = string.lower(msg)
     local len = string.len(lower)
     if string.find(lower,"p ") then
     local code = string.gsub(lower,"p ","")
-    encode(code)
-    end
-
-	local lower = string.lower(msg)
-    local len = string.len(lower)
-    if string.find(lower,"/e p ") then
-    local code = string.gsub(lower,"/e p ","")
-    encode(code)
-    end
+    	for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+			if v.Name == "BoomBox" then
+				v.Parent = game.Players.LocalPlayer.Character
+				v.Remote:FireServer("PlaySong", "3069324678")
+				wait(1.8)
+			end
+		end
+	encode(code)
+end
 end)
