@@ -11,7 +11,7 @@ TextLabel.Position = UDim2.new(0, 0, 0, 10)
 TextLabel.TextTransparency = 0.4
 TextLabel.Size = UDim2.new(1, 0, 0, 50)
 TextLabel.Font = Enum.Font.SourceSansLight
-TextLabel.Text = "ncredits to aidez"
+TextLabel.Text = "credits to aidez"
 TextLabel.TextColor3 = Color3.new(1, 1, 1)
 TextLabel.TextSize = 20
 
