@@ -97,50 +97,62 @@ for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
 	end
 end
 
-local ScreenGui = Instance.new("ScreenGui")
-local id = Instance.new("TextBox")
-local play = Instance.new("TextButton")
-
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
-
-id.Name = "id"
-id.Parent = ScreenGui
-id.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-id.BorderSizePixel = 0
-id.Position = UDim2.new(0.865449667, 0, 0.959645629, 0)
-id.Size = UDim2.new(0.100067794, 0, 0.0399999991, 0)
-id.Font = Enum.Font.SourceSans
-id.PlaceholderText = "id here"
-id.Text = ""
-id.TextColor3 = Color3.new(1, 1, 1)
-id.TextScaled = true
-id.TextSize = 14
-id.TextWrapped = true
-
-play.Name = "play"
-play.Parent = ScreenGui
-play.BackgroundColor3 = Color3.new(0.117647, 0.117647, 0.117647)
-play.BorderSizePixel = 0
-play.Position = UDim2.new(0.965331793, 0, 0.959563911, 0)
-play.Size = UDim2.new(0.0346682258, 0, 0.0400816947, 0)
-play.Font = Enum.Font.SourceSans
-play.Text = "Play"
-play.TextColor3 = Color3.new(1, 1, 1)
-play.TextScaled = true
-play.TextSize = 14
-play.TextWrapped = true
-
-play.MouseButton1Click:connect(function()
-print'credits to aidez'
-for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-if v.Name == "BoomBox" then
+local Boom = game.Players.LocalPlayer.Backpack.BoomBox
+Boom.Equipped:Connect(function(Mouse)
+Mouse.Button1Down:Connect(function()
+wait(0)
+if game.Players.LocalPlayer.PlayerGui:FindFirstChild("ChooseSongGui") then
+game.Players.LocalPlayer.PlayerGui:FindFirstChild("ChooseSongGui"):Destroy()
+end
+local sg = Instance.new("ScreenGui")
+sg.Name = "ChooseSongGui"
+sg.Parent = game.Players.LocalPlayer.PlayerGui
+local frame = Instance.new("Frame")
+frame.Style = "RobloxRound"
+frame.Size = UDim2.new(0.25, 0, 0.25, 0)
+frame.Position = UDim2.new((1-frame.Size.X.Scale)/2, 0, (1-frame.Size.Y.Scale)/2, 0)
+frame.Parent = sg
+frame.Draggable = true
+local text = Instance.new("TextLabel")
+text.BackgroundTransparency = 1
+text.TextStrokeTransparency = 0
+text.TextColor3 = Color3.new(1, 1, 1)
+text.Size = UDim2.new(1, 0, 0.6, 0)
+text.TextScaled = true
+text.Text = "sakarja audio protector\n credits to aidez"
+text.Parent = frame
+local input = Instance.new("TextBox")
+input.BackgroundColor3 = Color3.new(0, 0, 0)
+input.BackgroundTransparency = 0.5
+input.BorderColor3 = Color3.new(1, 1, 1)
+input.TextColor3 = Color3.new(1, 1, 1)
+input.TextStrokeTransparency = 1
+input.TextScaled = true
+input.Text = "142376088"
+input.Size = UDim2.new(1, 0, 0.2, 0)
+input.Position = UDim2.new(0, 0, 0.6, 0)
+input.Parent = frame
+local button = Instance.new("TextButton")
+button.Style = "RobloxButton"
+button.Size = UDim2.new(0.75, 0, 0.2, 0)
+button.Position = UDim2.new(0.125, 0, 0.8, 0)
+button.TextColor3 = Color3.new(1, 1, 1)
+button.TextStrokeTransparency = 0
+button.Text = "Play!"
+button.TextScaled = true
+button.Parent = frame
+button.MouseButton1Click:connect(function()
+sg:Destroy()
+for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+	if v.Name == "BoomBox" then
 	v.Parent = game.Players.LocalPlayer.Character
 	v.Remote:FireServer("PlaySong", "3069324678")
 	wait(1.8)
 	end
 end
-encode(id.Text)
+encode(input.Text)
+end)
+end)
 end)
 
 game.Players.LocalPlayer.Chatted:Connect(function(msg, plr)
