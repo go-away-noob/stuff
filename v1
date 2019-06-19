@@ -41,6 +41,11 @@ s::::::::::::::s a:::::aaaa::::::a k::::::k  k:::::ka:::::aaaa::::::a r:::::r   
 
 
 ]]
+print'credits to aidez'
+print'credits to aidez'
+print'credits to aidez'
+print'credits to aidez'
+print'credits to aidez'
 function encode(Code)
 ID = tostring(Code)
 
@@ -131,7 +136,7 @@ play.TextSize = 14
 play.TextWrapped = true
 
 play.MouseButton1Click:connect(function()
-
+print'credits to aidez'
 for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
 if v.Name == "BoomBox" then
 	v.Parent = game.Players.LocalPlayer.Character
@@ -157,3 +162,8 @@ game.Players.LocalPlayer.Chatted:Connect(function(msg, plr)
 	encode(code)
 end
 end)
+print'credits to aidez'
+print'credits to aidez'
+print'credits to aidez'
+print'credits to aidez'
+print'credits to aidez'
