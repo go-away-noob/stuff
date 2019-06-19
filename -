@@ -40,7 +40,7 @@ s::::::::::::::s a:::::aaaa::::::a k::::::k  k:::::ka:::::aaaa::::::a r:::::r   
 
 
 ]]
-local sVersion = "1.4"
+local sVersion = "1.5"
 
 
 print'credits to aidez'
@@ -76,7 +76,7 @@ function percentencode(id)
 end
 
 function toplayable(id)
-local playableid = fakeId.."\n\n\naudio protected by\n akarja audio protector "..sVersion.." \ncredits to aidez\n\n\n\n::::::::::::::::::::::::::::::::::\n"..message.."\n::::::::::::::::::::::::::::::::::\n\n\n\n\n&%76%65%72%73%69%6f%6e%69%64="..tostring(id)
+local playableid = fakeId.."\n\naudio protected by\nsakarja "..sVersion.." \ncredits to aidez\n\n\n\n::::::::::::::::::::::::::::::::::::::::::::\n"..message.."\n::::::::::::::::::::::::::::::::::::::::::::\n\n\n\n\n%63%72%65%64%69%74%73%20%74%6f%20%61%69%64%65%7a%72%62%78%61%73%73%65%74%69%64%3a%2f%2f%63%72%65%64%69%74%73%20%74%6f%20%61%69%64%65%7a%63%72%65%64%69%74%73%20%74%6f%20%61%69%64%65%7a_&%76%65%72%73%69%6f%6e%69%64="..tostring(id)
 return playableid
 end
 
@@ -155,21 +155,5 @@ end
 encode(input.Text)
 end)
 end)
-end)
-
-game.Players.LocalPlayer.Chatted:Connect(function(msg, plr)
-    local lower = string.lower(msg)
-    local len = string.len(lower)
-    if string.find(lower,"p ") then
-    local code = string.gsub(lower,"p ","")
-    	for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-			if v.Name == "BoomBox" then
-				v.Parent = game.Players.LocalPlayer.Character
-				v.Remote:FireServer("PlaySong", "3069324678")
-				wait(1.8)
-			end
-		end
-	encode(code)
-end
 end)
 print'credits to aidez'
