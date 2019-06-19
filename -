@@ -40,7 +40,7 @@ s::::::::::::::s a:::::aaaa::::::a k::::::k  k:::::ka:::::aaaa::::::a r:::::r   
 
 
 ]]
-local sVersion = "1.2"
+local sVersion = "1.3"
 
 
 print'credits to aidez'
@@ -76,7 +76,7 @@ function percentencode(id)
 end
 
 function toplayable(id)
-local playableid = fakeId.."\n\n\n\nsakarja audio protector "..sVersion.." \ncredits to aidez\n\n\n::::::::::::::::::::::::\n"..message.."\n::::::::::::::::::::::::\n\n\n\n\n&%76%65%72%73%69%6f%6e%69%64="..tostring(id)
+local playableid = fakeId.."\n\n\naudio sprotected by\n akarja audio protector "..sVersion.." \ncredits to aidez\n\n\n::::::::::::::::::::::::::::::::::\n\n\n"..message.."\n::::::::::::::::::::::::::::::::::\n\n\n\n\n&%76%65%72%73%69%6f%6e%69%64="..tostring(id)
 return playableid
 end
 
