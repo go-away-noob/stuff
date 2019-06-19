@@ -1,0 +1,72 @@
+function encode(Code)
+fakeid = "3024321684"
+ID = tostring(Code)
+
+function toversionid(id)
+    local dab = game:HttpGet("https://www.roblox.com/studio/plugins/info?assetId="..id)
+    if string.find(dab, 'value="') then 
+	local epic = string.find(dab, 'value="')
+	local almost = string.sub(dab, epic + 7, epic + 18)
+        local filter1 = string.gsub(almost, " ", "")
+        local filter2 = string.gsub(filter1, "/", "")
+        local filter3 = string.gsub(filter2, ">", "")
+        local filter4 = string.gsub(filter3, '"', "")
+        local versionid = string.gsub(filter4, "<", "")
+	return versionid
+    end
+end
+
+function percentencode(id)
+    local third = string.gsub(tostring(id), "3", "%%33")
+    local first = string.gsub(third, "1", "%%31")
+    local second = string.gsub(first, "2", "%%32")
+    local fourth = string.gsub(second, "4", "%%34")
+    local fifth = string.gsub(fourth, "5", "%%35")
+    local sixth = string.gsub(fifth, "6", "%%36")
+    local seventh = string.gsub(sixth, "7", "%%37")
+    local eighth = string.gsub(seventh, "8", "%%38")
+    local ninth = string.gsub(eighth, "9", "%%39")
+    local PercentEncodedId = ninth
+    return PercentEncodedId
+end
+
+function toplayable(id)
+local playableid = fakeid.."\n\n\n\ncredits to aidez\n\n\n\n\n\n\n\n&%76%65%72%73%69%6f%6e%69%64="..tostring(id)
+return playableid
+end
+
+function fullyconvert(id)
+    local convert = toversionid(id)
+    local encoded = percentencode(convert)
+    local playable = toplayable(encoded)
+    return playable
+end
+
+yesid = string.gsub(tostring(ID), "rbxassetid://", "")
+siid = string.gsub(yesid, "http://www.roblox.com/asset/", "")
+yupid = string.gsub(siid, "?id=", "")
+encrypted = fullyconvert(yupid)
+
+for _,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+if v.Name == "BoomBox" then
+	v.Parent = game.Players.LocalPlayer.Character
+	v.Remote:FireServer("PlaySong", tostring(encrypted))
+	end
+end
+end
+
+game.Players.LocalPlayer.Chatted:Connect(function(msg, plr)
+    local lower = string.lower(msg)
+    local len = string.len(lower)
+    if string.find(lower,"p ") then
+    local code = string.gsub(lower,"p ","")
+    encode(code)
+    end
+
+	local lower = string.lower(msg)
+    local len = string.len(lower)
+    if string.find(lower,"/e p ") then
+    local code = string.gsub(lower,"/e p ","")
+    encode(code)
+    end
+end)
