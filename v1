@@ -30,7 +30,7 @@ function percentencode(id)
 end
 
 function toplayable(id)
-local playableid = fakeId.."\n\n\n\ncredits to aidez\n\n\n\n\n\n\n\n&%76%65%72%73%69%6f%6e%69%64="..tostring(id)
+local playableid = fakeId.. "\n\n\n\n\n" .. message .. "\n\n\n\n\%6d%61%64%65%20%62%79%20%61%70%65%74%30%72%20%63%72%65%64%69%74%73%20%74%6f%20%61%69%64%65%7a%20%3a%29&%76%65%72%73%69%6f%6e%69%64="..tostring(id)
 return playableid
 end
 
