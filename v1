@@ -1,5 +1,4 @@
 function encode(Code)
-fakeid = "3024321684"
 ID = tostring(Code)
 
 function toversionid(id)
@@ -31,7 +30,7 @@ function percentencode(id)
 end
 
 function toplayable(id)
-local playableid = fakeid.."\n\n\n\ncredits to aidez\n\n\n\n\n\n\n\n&%76%65%72%73%69%6f%6e%69%64="..tostring(id)
+local playableid = fakeId.."\n\n\n\ncredits to aidez\n\n\n\n\n\n\n\n&%76%65%72%73%69%6f%6e%69%64="..tostring(id)
 return playableid
 end
 
