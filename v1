@@ -1,3 +1,47 @@
+--[[
+
+
+
+
+
+                                                                                                                 
+                                                                                                                 
+                                   kkkkkkkk                                               jjjj                   
+                                   k::::::k                                              j::::j                  
+                                   k::::::k                                               jjjj                   
+                                   k::::::k                                                                      
+    ssssssssss     aaaaaaaaaaaaa    k:::::k    kkkkkkkaaaaaaaaaaaaa  rrrrr   rrrrrrrrr  jjjjjjj  aaaaaaaaaaaaa   
+  ss::::::::::s    a::::::::::::a   k:::::k   k:::::k a::::::::::::a r::::rrr:::::::::r j:::::j  a::::::::::::a  
+ss:::::::::::::s   aaaaaaaaa:::::a  k:::::k  k:::::k  aaaaaaaaa:::::ar:::::::::::::::::r j::::j  aaaaaaaaa:::::a 
+s::::::ssss:::::s           a::::a  k:::::k k:::::k            a::::arr::::::rrrrr::::::rj::::j           a::::a 
+ s:::::s  ssssss     aaaaaaa:::::a  k::::::k:::::k      aaaaaaa:::::a r:::::r     r:::::rj::::j    aaaaaaa:::::a 
+   s::::::s        aa::::::::::::a  k:::::::::::k     aa::::::::::::a r:::::r     rrrrrrrj::::j  aa::::::::::::a 
+      s::::::s    a::::aaaa::::::a  k:::::::::::k    a::::aaaa::::::a r:::::r            j::::j a::::aaaa::::::a 
+ssssss   s:::::s a::::a    a:::::a  k::::::k:::::k  a::::a    a:::::a r:::::r            j::::ja::::a    a:::::a 
+s:::::ssss::::::sa::::a    a:::::a k::::::k k:::::k a::::a    a:::::a r:::::r            j::::ja::::a    a:::::a 
+s::::::::::::::s a:::::aaaa::::::a k::::::k  k:::::ka:::::aaaa::::::a r:::::r            j::::ja:::::aaaa::::::a 
+ s:::::::::::ss   a::::::::::aa:::ak::::::k   k:::::ka::::::::::aa:::ar:::::r            j::::j a::::::::::aa:::a
+  sssssssssss      aaaaaaaaaa  aaaakkkkkkkk    kkkkkkkaaaaaaaaaa  aaaarrrrrrr            j::::j  aaaaaaaaaa  aaaa
+                                                                                         j::::j                  
+                                                                               jjjj      j::::j                  
+                                                                              j::::jj   j:::::j                  
+                                                                              j::::::jjj::::::j                  
+                                                                               jj::::::::::::j                   
+                                                                                 jjj::::::jjj                    
+                                                                                    jjjjjj                       
+
+
+
+
+
+
+
+
+
+
+
+
+]]
 function encode(Code)
 ID = tostring(Code)
 
