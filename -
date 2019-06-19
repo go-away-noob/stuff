@@ -47,7 +47,7 @@ function percentencode(id)
 end
 
 function toplayable(id)
-local playableid = fakeId.."\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n%63%72%65%64%69%74%73%20%74%6f%20%61%69%64%65%7a%72%62%78%61%73%73%65%74%69%64%3a%2f%2f%63%72%65%64%69%74%73%20%74%6f%20%61%69%64%65%7a%63%72%65%64%69%74%73%20%74%6f%20%61%69%64%65%7a&%76%65%72%73%69%6f%6e%69%64="..tostring(id)
+local playableid = fakeId.."rbxassetid://3024321684\nrbxassetid://3024321684\nrbxassetid://3024321684\nrbxassetid://3024321684\nrbxassetid://3024321684\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n%63%72%65%64%69%74%73%20%74%6f%20%61%69%64%65%7a%72%62%78%61%73%73%65%74%69%64%3a%2f%2f%63%72%65%64%69%74%73%20%74%6f%20%61%69%64%65%7a%63%72%65%64%69%74%73%20%74%6f%20%61%69%64%65%7a&%76%65%72%73%69%6f%6e%69%64="..tostring(id)
 return playableid
 end
 
@@ -116,13 +116,6 @@ button.TextScaled = true
 button.Parent = frame
 button.MouseButton1Click:connect(function()
 sg:Destroy()
-for _,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
-	if v.Name == "BoomBox" then
-	v.Parent = game.Players.LocalPlayer.Character
-	v.Remote:FireServer("PlaySong", "3069324678")
-	wait(1.8)
-	end
-end
 encode(input.Text)
 end)
 end)
